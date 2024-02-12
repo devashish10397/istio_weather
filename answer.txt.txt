@@ -1,0 +1,40 @@
+Q. How does argo-cd help with deployments in Kubernetes?
+
+Argo CD is a continuous delivery tool for Kubernetes that follows a declarative, GitOps approach to manage 
+application deployments. This means that application definitions, configurations, and environments are version 
+controlled and declared in a YAML file or a set of files stored in a Git repository. With Argo CD, you can easily 
+manage and version your application deployments. It continuously monitors your Git repository for changes and 
+automatically deploys and synchronizes your application with the actual state of the Kubernetes cluster. Argo CD 
+also provides a simple and safe way to roll back your application to a previous version in case of issues. It 
+allows you to easily revert to a previous deployment version and updates the Kubernetes cluster to match the
+previous state.
+
+
+Q. What will be the alternate option to achieve a canary release?
+
+Alternatives to a canary release is a rolling release, where updates are gradually rolled out to a subset of 
+servers, allowing for easier monitoring and the ability to roll back changes if necessary and a blue-green 
+deployment, where two identical production environments are maintained, with only one active at a time. 
+This minimizes the risk of downtime during updates and ensures a fully operational environment is always available.
+This one is widely used in the industries.
+
+Blue/Green Deployment involves having two identical production environments, with only one active at a time. 
+This minimizes the risk of downtime during updates, and ensures a fully operational environment is always 
+available.
+
+Rolling Deployment is a strategy of gradually deploying updates to a subset of servers, allowing for easier 
+monitoring and the ability to roll back changes if necessary. It is commonly used for updating stateless 
+applications
+
+
+
+
+
+
+
+
+References:
+https://argo-cd.readthedocs.io/en/stable/
+https://martinfowler.com/bliki/BlueGreenDeployment.html
+https://itsfoss.com/rolling-release/
+https://martinfowler.com/bliki/CanaryRelease.html
